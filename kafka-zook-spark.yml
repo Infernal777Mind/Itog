@@ -1,0 +1,11 @@
+- name: kafka
+  hosts: all
+  remote_user: admin
+  become: yes
+  roles:
+    - role: common
+    - role: zookeeper
+    - role: kafka
+    - role: hdfs
+    - role: spark
+

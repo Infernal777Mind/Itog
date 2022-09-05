@@ -1,0 +1,13 @@
+- name: create install dir
+  file: path="{{ install_dir }}" state=directory
+
+- name: create temporary install dir
+  file: path="{{ install_temp_dir }}" state=directory
+
+
+- import_tasks: os-packages.yml
+
+- import_tasks: utilities.yml
+
+- import_tasks: ssh-config.yml
+

@@ -1,0 +1,11 @@
+.terraform.lock.hcl
+meta.txt
+terraform
+.terraform/
+secret.tfvars
+hosts
+ansible.cfg
+hosts-kafka
+itog.code-workspace
+terraform.tfstate
+terraform.tfstate.backup

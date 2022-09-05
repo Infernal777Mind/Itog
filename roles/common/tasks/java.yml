@@ -1,0 +1,11 @@
+# Environment setup.
+- name: Set JAVA_HOME if configured.
+  template:
+    src: java_home.sh.j2
+    dest: /etc/profile.d/java_home.sh
+    mode: 0644
+  when: java_home is not defined and java_home == ''
+
+# Set java_home fact to be used for other roles
+- name: set java home fact
+  set_fact: java_home={{ common.java_home }}

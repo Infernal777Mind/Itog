@@ -1,0 +1,6 @@
+- name: Update repository subscription on FYRE
+  shell:
+     apt-get update -y
+
+- name: clean apt repository
+  shell: "apt-get clean"
