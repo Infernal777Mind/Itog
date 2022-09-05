@@ -38,7 +38,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   provisioner "local-exec" {
-    command = "sed -i 's/host1/'${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address}'/' ./hosts-fyre-ambari"
+    command = "sed -i 's/host1/'${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address}'/' ./hosts-kafka"
   }
 }
 resource "yandex_compute_instance" "vm-2" {
@@ -67,7 +67,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 
   provisioner "local-exec" {
-    command = "sed -i 's/host2/'${yandex_compute_instance.vm-2.network_interface.0.nat_ip_address}'/' ./hosts-fyre-ambari"
+    command = "sed -i 's/host2/'${yandex_compute_instance.vm-2.network_interface.0.nat_ip_address}'/' ./hosts-kafka"
   }
 }
 resource "yandex_compute_instance" "vm-3" {
@@ -96,6 +96,6 @@ resource "yandex_compute_instance" "vm-3" {
   }
 
   provisioner "local-exec" {
-    command = "sed -i 's/host3/'${yandex_compute_instance.vm-3.network_interface.0.nat_ip_address}'/' ./hosts-fyre-ambari"
+    command = "sed -i 's/host3/'${yandex_compute_instance.vm-3.network_interface.0.nat_ip_address}'/' ./hosts-kafka"
   }
 }
