@@ -5,7 +5,5 @@
   terraform plan
   terraform apply
 
-  ansible-playbook -i hosts mf_dep.yml -v
-  
-  ansible-playbook -i hosts mo_dep.yml -v
+  ansible-playbook kafka-zook-spark.yml -i hosts-kafka --private-key=~/.ssh/ip_rsa
 ```
